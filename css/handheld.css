@@ -1,0 +1,25 @@
+* {
+  float: none;       /* Screens are not big enough to account for floats */
+  background: #fff;  /*  As much contrast as possible */
+  color: #000;
+}
+
+/* Slightly reducing font size to reduce need to scroll */
+body { font-size: 80%; }
+
+pre {
+    -webkit-text-size-adjust: 140%;
+}
+code {
+    -webkit-text-size-adjust: 160%;
+}
+#access,
+.entry-meta,
+.entry-utility,
+.navigation,
+.widget-area {
+    -webkit-text-size-adjust: 120%;
+}
+#site-description {
+    -webkit-text-size-adjust: none;
+}

@@ -1,0 +1,7 @@
+/*-  PREVENT BACKGROUND IMAGE FLICKER ON HOVER
+----------------------------------------------------------------------*/
+html {
+    filter: expression(document.execCommand("BackgroundImageCache", false, true));
+}
+
+img, div, .pngfix, input, { behavior: url("/css/_patches/iepngfix.htc")
