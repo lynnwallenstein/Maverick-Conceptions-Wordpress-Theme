@@ -73,12 +73,13 @@
                  - Transparency is not recommended (iOS will put a black BG behind the icon) -->            
             
         
-        
+            
             <!-- CSS : implied media="all" -->
+            <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/js/plugins/fancybox/jquery.fancybox-1.3.1.css" />  
             <link rel="stylesheet" type="text/css" href="<?php bloginfo( 'stylesheet_url' ); ?>?v=1" />
             
                     
-            <link rel="stylesheet" media="print" href="css/_print/main.css?v=1" />  
+            <link rel="stylesheet" media="print" href="<?php bloginfo('stylesheet_directory'); ?>/css/_print/main.css?v=1" />  
             <?php
                 /* We add some JavaScript to pages with the comment form
                  * to support sites with threaded comments (when in use).
@@ -92,10 +93,10 @@
                  * as styles, scripts, and meta tags.
                  */
                 wp_head();
-            ?>        
+            ?>      
         
             <!-- For the less-enabled mobile browsers like Opera Mini -->
-            <link rel="stylesheet" media="handheld" href="<?php bloginfo('stylesheet_directory'); ?>/css/>handheld.css?v=1">
+            <link rel="stylesheet" media="handheld" href="<?php bloginfo('stylesheet_directory'); ?>/css/handheld.css?v=1">
         
             <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
             <script src="<?php bloginfo('stylesheet_directory'); ?>/js/modernizr-1.5.min.js"></script>
@@ -114,9 +115,9 @@
             
             <!-- The following is STRONGLY OPTIONAL, but useful if you really need to kick IE in the pants.
                  There are different flavors; pick the one right for your project: http://code.google.com/p/ie7-js/ -->
-            <!--[if lt IE 8]>
-            <script src="http://ie7-js.googlecode.com/svn/version/2.0(beta3)/IE8.js"></script>
-            <![endif]-->            
+            <!--[if lt IE 9]>
+                <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+            <![endif]-->           
     
     </head>
 
@@ -128,6 +129,6 @@
     <!--[if IE 9 ]>    <body class="ie9"> <![endif]-->
     <!--[if (gt IE 9)|!(IE)]><!--> <body> <!--<![endif]-->            
             
-
-    <div id="wrapper" class="hfeed">
-        <div id="container">
+    <div id="wrap">
+        <div id="wrapper" class="hfeed">
+            <div id="container">

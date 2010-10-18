@@ -10,31 +10,36 @@
  * @since Designers Default 1.0
  */
 ?>
+                <?php if ( is_home() ) { ?>
+                <div id="twitter_widget">
+                </div>
+                <?php } ?>
+                <nav id="page_side">
+                    <h2>Navigation</h2>
+                    <ul>
+                        <li id="categories"><a href="/archives#categories">* Categories</a></li>
+                        <li id="tag_cloud"><a href="/archives#tag_cloud">* Tag Cloud</a></li>
+                        <li id="archive"><a href="/archives">* Archives</a></li>
+                        <li id="rss"><a href="/feed">* RSS</a></li>
+                    </ul>
+                </nav>
+                <nav id="page_bottom">
+                    <ul>
+                        <li id="home" <?php if ( is_home() ) { ?>class="active"<?php } ?>><a href="/">home</a></li>
+                        <li id="about" <?php if ( is_page('About')  ) { ?>class="active"<?php } ?>><a href="/about">about</a></li>
+                        <li id="contact" <?php if ( is_page('Contact')  ) { ?>class="active"<?php } ?>><a href="/contact">contact</a></li>
+                        <li id="lifestream" <?php if ( is_page('Lifestream')  ) { ?>class="active"<?php } ?>><a href="/lifestream">lifestream</a></li>
+                    </ul>
+                </nav>
+            </div><!-- #container -->
+                    
+            </div><!-- #wrapper -->
+    
+            <div id="logo">
+            	<a href="/"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/logo_large.png" alt="Maverick Concentions" /></a>
+            </div>
 
-            <nav id="page_side">
-                <h2>Navigation</h2>
-                <ul>
-                    <li id="categories"><a href="/archives#categories">* Categories</a></li>
-                    <li id="tag_cloud"><a href="/archives#tag_cloud">* Tag Cloud</a></li>
-                    <li id="archive"><a href="/archives">* Archives</a></li>
-                    <li id="rss"><a href="/feed">* RSS</a></li>
-                </ul>
-            </nav>
-            <nav id="page_bottom">
-                <ul>
-                    <li id="home" <?php if ( is_home() ) { ?>class="active"<?php } ?>><a href="/">home</a></li>
-                    <li id="about" <?php if ( is_page('About')  ) { ?>class="active"<?php } ?>><a href="/about">about</a></li>
-                    <li id="contact" <?php if ( is_page('Contact')  ) { ?>class="active"<?php } ?>><a href="/contact">contact</a></li>
-                    <li id="lifestream" <?php if ( is_page('Lifestream')  ) { ?>class="active"<?php } ?>><a href="/lifestream">lifestream</a></li>
-                </ul>
-            </nav>
-        </div><!-- #container -->
-                
-        </div><!-- #wrapper -->
-
-        <div id="logo">
-        	<a href="/"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/logo_large.png" alt="Maverick Concentions" /></a>
-        </div>
+        </div><!-- #wrap -->
 
         <footer role="contentinfo" id="page_footer">
             <div id="sites_button">
@@ -67,6 +72,7 @@
         </footer>
 
 
+
         <!-- Javascript at the bottom for fast page loading -->
         
         <!-- Grab Google CDN's jQuery. fall back to local if necessary -->
@@ -75,7 +81,23 @@
         
     	<script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/plugins/fancybox/jquery.mousewheel-3.0.2.pack.js"></script>
     	<script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/plugins/fancybox/jquery.fancybox-1.3.1.js"></script>
-    	<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/js/plugins/fancybox/jquery.fancybox-1.3.1.css" media="screen" />        
+    	
+        <?php if ( is_home() ) { ?>
+            <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.twitter.js"></script>
+            <script>
+                $("#twitter_widget").getTwitter({
+        			userName: "LynnWallenstein",
+        			numTweets: 1,
+        			loaderText: "Loading tweets...",
+        			slideIn: false,
+        			slideDuration: 750,
+        			showHeading: true,
+        			headingText: '<span class="Pictos">B</span> From Twitter',
+        			showProfileLink: false,
+        			showTimestamp: true
+    		    });
+		    </script>
+        <?php } ?>	
         
         <script src="<?php bloginfo('stylesheet_directory'); ?>/js/plugins.js?v=1"></script>
         <script src="<?php bloginfo('stylesheet_directory'); ?>/js/script.js?v=1"></script>

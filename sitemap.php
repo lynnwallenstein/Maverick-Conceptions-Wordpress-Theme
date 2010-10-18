@@ -36,7 +36,7 @@ get_header(); ?>
                         </section>
                         
                         <section class="sitemap_section">
-                            <h2><span class="Pictos">b</span> Archives</h2>
+                            <h2><span class="Pictos">\</span> Archives</h2>
                             <ul>
                             <?php wp_get_archives(); ?> 
                             </ul>

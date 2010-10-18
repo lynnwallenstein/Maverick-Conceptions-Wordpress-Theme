@@ -16,7 +16,6 @@ Tags:
 /* Main global 'theme' and typographic styles */
 
 
-
 body {
     background: #2b2b2b url("images/background.jpg") top center no-repeat fixed;
     font: 76%/150% "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Arial, sans-serif;
@@ -135,11 +134,11 @@ a:link {
     color: #0066cc;
 }
 a:visited {
-    color: #abd671;
+    color: #82a652;
 }
 a:active,
 a:hover {
-    color: #82a652;
+    color: #cc0066;
 }
 
 /* Text meant only for screen readers */
@@ -151,30 +150,18 @@ a:hover {
 /* = CSS Organized By Structure
 -------------------------------------------------------------- */
 
-@media only screen and (min-width: 900px) {
-    
-    #wrapper{
-        background: url("images/background_pages_large.png") top center no-repeat;
-        height: 753px;
-        margin: 0 auto 0px auto;
-        padding: 0 20px;
-        position: relative;
-        width: 940px;
-    }
-    
-}
 
     /* =Main Body
     -------------------------------------------------------------- */
     
         #container {
             clear: both;
-            padding: 100px 50px 0px 50px;
+            padding: 100px 0px 0px 0px;
             margin: 0 auto auto auto;
         }
             #content {
                 color: #333;              
-                margin: 0px 40px 36px 40px;
+                margin: 0 90px 0 90px;
             }            
                 #primary,
                 #secondary {
@@ -326,27 +313,16 @@ a:hover {
     right: 20px;
     float: right;
     width: 500px;
+    display: none;
 }    
-
-@media screen{
-    #page_footer{
-        position: fixed;
-    }
-}
-* html body{} 
-* html div#wrapper{
-    height: 100%;
-    overflow:auto;
-}
 
 #page_footer {
     clear: both;
     border: solid;
     border-width: 1px;
-    margin: 20px auto 0;
     height: 50px;
     font-size: 10px;
-    position:absolute;
+    position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -499,8 +475,11 @@ a:hover {
 section {}
 
     article {
-        margin: 0 0 48px 0;
+        margin-top: -70px;
     }
+        .page article {
+            margin-top: 0;
+        }
         article header {
             background: #aad470;
             clear: both;
@@ -618,11 +597,11 @@ section {}
     overflow: auto;
     margin: 0 50px;
 }
-.page .entry-content {
-    height: 380px;
-    margin: 0;
-    padding: 20px;
-}
+    .page .entry-content {
+        height: 370px;
+        margin: 0;
+        padding: 20px;
+    }
 .entry-content,
 .entry-summary {
     clear: both;
@@ -726,7 +705,7 @@ body.page .edit-link {
 }
 
 
-/* =Asides
+/* = Asides
 -------------------------------------------------------------- */
 
 .home #content .category-asides p {
@@ -743,7 +722,7 @@ body.page .edit-link {
 }
 
 
-/* =Gallery listing
+/* = Gallery listing
 -------------------------------------------------------------- */
 
 .category-gallery .size-thumbnail img {
@@ -760,7 +739,7 @@ body.page .edit-link {
 }
 
 
-/* =Attachment pages
+/* = Attachment pages
 -------------------------------------------------------------- */
 
 .attachment .entry-content .entry-caption {
@@ -775,7 +754,7 @@ body.page .edit-link {
 }
 
 
-/* =Images
+/* = Images
 -------------------------------------------------------------- */
 
 #content img {
@@ -881,20 +860,26 @@ body.page .edit-link {
 .navigation a:hover {
     color: #ff4b33;
 }
-.nav-previous {
+.nav-previous a {
+    background: url("images/previous.png") top center no-repeat;
+    display: block;
     float: left;
-    width: 50%;
+    height: 35px;
+    margin: 30px 0px 0px 0px;
+    text-indent: -9999px;
+    width: 75px;
 }
-.nav-next {
+.nav-next a {
+    background: url("images/next.png") top center no-repeat;
+    display: block;
     float: right;
-    text-align: right;
-    width: 50%;
+    height: 35px;
+    margin: 0px 0px 0px 15px;
+    text-indent: -9999px;
+    width: 75px;
 }
 #nav-above {
     margin: 0 0 18px 0;
-}
-#nav-above {
-    display: none;
 }
 .paged #nav-above,
 .single #nav-above {
@@ -909,6 +894,7 @@ body.page .edit-link {
 -------------------------------------------------------------- */
 #comments {
     clear: both;
+    padding: 0 20px;
 }
 #comments .navigation {
     padding: 0 0 18px 0;
@@ -1095,13 +1081,155 @@ h3#reply-title {
 }
 
 
-
-
+/* FancyBox
+------------------------------------------------------------------- */
+#fancybox-outer {
+	background: url("images/background_graph.png");
+}
+#fancybox-inner {
+	position: absolute;
+	padding: 0;
+}
 
 .archive_section, .sitemap_section {
     border-bottom: 3px dashed #ebecee;
     margin-bottom: 30px;
     padding-bottom: 30px;
 }
+
+/* Twitter Widget 
+------------------------------------------------------------------- */
+#twitter_widget {
+    background: #FFF7B5;
+    background: -moz-linear-gradient(top, #fefcea 0%, #FFF7B5 100%); /* firefox */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fefcea), color-stop(100%,#FFF7B5)); /* webkit */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefcea', endColorstr='#FFF7B5',GradientType=0 ); /* ie */
+    box-shadow: inset 1px 1px 1px rgba(0,0,0,0.2), 1px 1px 5px rgba(0,0,0,0.5), .5px .5px 8px rgba(0,0,0,0.25);
+        -moz-box-shadow: inset 1px 1px 1px rgba(0,0,0,0.2), 1px 1px 5px rgba(0,0,0,0.5), .5px .5px 8px rgba(0,0,0,0.25);
+        -webkit-box-shadow: inset 1px 1px 1px rgba(0,0,0,0.2), 1px 1px 5px rgba(0,0,0,0.5), .5px .5px 8px rgba(0,0,0,0.25);
+    font-size: 10px;
+    margin: 15px 0 0 45px;
+    padding: 10px 10px 15px 10px;
+    position: relative;
+    overflow: hidden;
+    transform: rotate(-4deg);
+        -webkit-transform:  rotate(-4deg);
+        -moz-transform: rotate(-4deg);
+    width: 300px;
+    height: 92px;
+    z-index: 9990;
+}
+#twitter_widget:hover {
+    transform: rotate(0deg) scale(2);
+        -webkit-transform:  rotate(0deg) scale(2);
+        -moz-transform: rotate(0deg) scale(2);
+}
+    #twitter_widget h2 {
+        color: #e5dea3;
+        font-size: 12px;
+        float: left;
+        height: 100px;
+        text-shadow: 0px 0px 1px rgba(255,255,255,0.2);
+            -moz-text-shadow: 0px 0px 1px rgba(255,255,255,0.2);
+            -webkit-text-shadow: 0px 0px 1px rgba(255,255,255,0.2);
+        transform: rotate(-90deg);
+            -webkit-transform:  rotate(-90deg);
+            -moz-transform: rotate(-90deg);
+        padding: 0;
+        position: absolute;
+        bottom: 10;
+        left: 0;
+    }
+    #twitter_update_list {
+        float: right;
+        list-style: none;
+        margin: 0 0 0 20px;
+        text-align: right;
+    }
+        #twitter_update_list span {
+            display: block;
+            font-family: 'Reenie Beanie', "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Arial, sans-serif;
+            font-size: 25px;
+            padding: 20px 0 10px 0;
+            text-align: left;
+        }
+      
+        
+/* Media Queries
+------------------------------------------------------------------- 
+	Default 5-column, 768 px layout for iPads, netbooks, and IE
+	(All other layouts inherit styles from this layout)
+	-----------------------------------------------------------
+	1      2      3      4      5     
+	120px  264px  408px  552px  696px   (24px gutters)
+*/
+
+    #wrapper{
+        background: url("images/background_pages_large.png") top center no-repeat;
+        height: 753px;
+        margin: 0 auto 0px auto;
+        padding: 0 20px;
+        position: relative;
+        width: 940px;
+    }
+    
+    #logo {
+        display: none;
+    }
+
+@media only screen and (max-height: 830px) {
+	
+    #page_footer {
+        display: none;
+    }
+	
+}
+
+/* 
+	2-column, 320 px layout for smartphones
+	---------------------------------------
+	1      2
+	120px  264px   (24px gutters)
+*/
+
+@media only screen and (max-width: 767px) {
+	
+    #logo {
+        display: none;
+    }
+	
+}
+
+/* 
+	8-column, 1224 px layout for desktops and laptops
+	------------------------------------------------------------------------
+	1      2      3      4      5      6      7      8
+	120px  264px  408px  552px  696px  840px  984px  1128px   (24px gutters)
+*/
+
+@media only screen and (min-width: 1224px) {
+	
+    #logo {
+        display: inline;
+    }
+	
+}
+
+/* 
+	12-column, 1824 px layout for gigantic screens   (24px gutters)
+	---------------------------------------------------------------------------------------
+	1      2      3      4      5      6      7      8       9       10      11      12
+	120px  264px  408px  552px  696px  840px  984px  1128px  1272px  1416px  1560px  1704px
+*/
+
+@media only screen and (min-width: 1824px) {
+	
+    #logo {
+        display: inline;
+    }
+	
+}
+
+
 
 
