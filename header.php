@@ -11,7 +11,13 @@
 ?>
 
 <!doctype html>
-<html <?php language_attributes(); ?> class="no-js">
+<!--[if lt IE 7]>  <html <?php language_attributes(); ?> class="ie ie6 lte9 lte8 lte7 no-js<?php if (is_home()) : ?> is_home<?php endif; ?><?php if (is_front_page()) : ?> is_front_page<?php endif; ?><?php if (is_page()) : ?> is_page<?php endif; ?><?php if (is_single()) : ?> is_single<?php endif; ?><?php if (is_admin()) : ?> is_admin<?php endif; ?><?php if (is_sticky()) : ?> is_sticky<?php endif; ?>"> <![endif]-->
+<!--[if IE 7]>     <html <?php language_attributes(); ?> class="ie ie7 lte9 lte8 lte7 no-js<?php if (is_home()) : ?> is_home<?php endif; ?><?php if (is_front_page()) : ?> is_front_page<?php endif; ?><?php if (is_page()) : ?> is_page<?php endif; ?><?php if (is_single()) : ?> is_single<?php endif; ?><?php if (is_admin()) : ?> is_admin<?php endif; ?><?php if (is_sticky()) : ?> is_sticky<?php endif; ?>"> <![endif]-->
+<!--[if IE 8]>     <html <?php language_attributes(); ?> class="ie ie8 lte9 lte8 no-js<?php if (is_home()) : ?> is_home<?php endif; ?><?php if (is_front_page()) : ?> is_front_page<?php endif; ?><?php if (is_page()) : ?> is_page<?php endif; ?><?php if (is_single()) : ?> is_single<?php endif; ?><?php if (is_admin()) : ?> is_admin<?php endif; ?><?php if (is_sticky()) : ?> is_sticky<?php endif; ?>"> <![endif]-->
+<!--[if IE 9]>     <html <?php language_attributes(); ?> class="ie ie9 lte9 no-js<?php if (is_home()) : ?> is_home<?php endif; ?><?php if (is_front_page()) : ?> is_front_page<?php endif; ?><?php if (is_page()) : ?> is_page<?php endif; ?><?php if (is_single()) : ?> is_single<?php endif; ?><?php if (is_admin()) : ?> is_admin<?php endif; ?><?php if (is_sticky()) : ?> is_sticky<?php endif; ?>"> <![endif]-->
+<!--[if gt IE 9]>  <html <?php language_attributes(); ?> class="ie gt9 no-js<?php if (is_home()) : ?> is_home<?php endif; ?><?php if (is_front_page()) : ?> is_front_page<?php endif; ?><?php if (is_page()) : ?> is_page<?php endif; ?><?php if (is_single()) : ?> is_single<?php endif; ?><?php if (is_admin()) : ?> is_admin<?php endif; ?><?php if (is_sticky()) : ?> is_sticky<?php endif; ?>"> <![endif]-->
+<!--[if !IE]><!--> <html <?php language_attributes(); ?> class="neie no-js<?php if (is_home()) : ?> is_home<?php endif; ?><?php if (is_front_page()) : ?> is_front_page<?php endif; ?><?php if (is_page()) : ?> is_page<?php endif; ?><?php if (is_single()) : ?> is_single<?php endif; ?><?php if (is_admin()) : ?> is_admin<?php endif; ?><?php if (is_sticky()) : ?> is_sticky<?php endif; ?>"><!--<![endif]-->
+
     <head>
         <meta charset="<?php bloginfo( 'charset' ); ?>" />
         <title><?php
@@ -99,7 +105,7 @@
             <link rel="stylesheet" media="handheld" href="<?php bloginfo('stylesheet_directory'); ?>/css/handheld.css?v=1">
         
             <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
-            <script src="<?php bloginfo('stylesheet_directory'); ?>/js/modernizr-1.5.min.js"></script>
+            <script src="<?php bloginfo('stylesheet_directory'); ?>/js/modernizr-1.6.js"></script>
         
             <!-- These are IE-specific conditional style sheets. You might consider removing the ones you don't end up using. -->
                  
@@ -127,7 +133,7 @@
     <!--[if IE 7 ]>    <body class="ie7"> <![endif]-->
     <!--[if IE 8 ]>    <body class="ie8"> <![endif]-->
     <!--[if IE 9 ]>    <body class="ie9"> <![endif]-->
-    <!--[if (gt IE 9)|!(IE)]><!--> <body> <!--<![endif]-->            
+    <!--[if (gt IE 9)|!(IE)]><!--> <body class="<?php if (is_home()) : ?>is_home<?php endif; ?> <?php if (is_page()) : ?>is_page<?php endif; ?> <?php if (is_single()) : ?>is_single<?php endif; ?> <?php if (is_admin()) : ?>is_admin<?php endif; ?> <?php if (is_sticky()) : ?>is_sticky<?php endif; ?>"> <!--<![endif]-->            
             
     <div id="wrap">
         <div id="wrapper" class="hfeed">
